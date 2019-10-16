@@ -3,17 +3,29 @@
 }
 
 body { 
-  font-family:'Montserrat', sans-serif;;
+  font-family:'Montserrat', sans-serif;
+  font-style: normal;
   overflow-x: hidden;
-  text-align: center;
-  color: white;
 }
+
+a{
+  text-decoration: none;
+}
+
+button{
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  color: #FFFFFF;
+  outline: none;
+}
+
+
+/* Header start */
 
 .header {
   min-height: 100vh;
   width: 100%;
 }
-
 
 .fullscreen-video-wrap {
   position: absolute;
@@ -30,10 +42,88 @@ body {
  min-height: 100%;
 }
 
-
 .header-content {
+  position: absolute;
   z-index: 3;
-  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.header-contacts{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+.header-contacts-left {
+  padding-top: 60px;
+  padding-left: 135px;
+}
+
+.header-icon-vk img{
+  margin-bottom: 3px;
+}
+.header-icon-insta{
+  margin-left: 20px;
+}
+
+.header-contacts-right{
+  padding-right: 152px;
+  text-align: right;
+}
+
+.header-contacts-right p {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  
+}
+
+.header-contacts-right button {
+  background: transparent;
+  border-bottom: 1px dashed #ffffffa6;
+  padding: 0;
+  padding-bottom: 4px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+h1{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+
+.header-content h3 {
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+}
+
+.whatch-work-but{
+  background: #090909;
+  padding: 24px 33px 24px 33px;
+  margin-top: 88px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 0%;
+}
+
+.whatch-work-but:hover{
+  cursor: pointer;
+  background: #252323;
+} 
+.mouse-icn{
+  margin-top: 67px;
+  margin-bottom: 78px;
 }
 
 main{ 
