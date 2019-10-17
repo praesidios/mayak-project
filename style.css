@@ -19,31 +19,44 @@ button{
   outline: none;
 }
 
+h2 {
+  width: 626px;
+  font-size: 35px;
+  line-height: 43px;
+  margin: auto;
+}
 
 /* Header start */
 
 .header {
-  min-height: 100vh;
-  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: url("./img/cover.png") center no-repeat;
+  background-size: cover;
 }
 
 .fullscreen-video-wrap {
-  position: absolute;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
   z-index: 1;
+
 }
 
 .fullscreen-video-wrap  video {
- min-width: 100%;
- min-height: 100%;
+ /* min-width: 100%;
+ min-height: 100%; */
+ width: 100%;
+ height: auto;
+ position: absolute;
+ top: 0;
+ left: 0;
 }
 
 .header-content {
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 3;
   width: 100%;
   height: 100%;
@@ -91,6 +104,15 @@ button{
   line-height: 17px;
 }
 
+
+.header-intro{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 h1{
   text-transform: uppercase;
   font-weight: bold;
@@ -101,7 +123,7 @@ h1{
 }
 
 
-.header-content h3 {
+.header-text h3 {
   font-size: 22px;
   line-height: 27px;
   letter-spacing: 0.06em;
@@ -111,7 +133,6 @@ h1{
 .whatch-work-but{
   background: #090909;
   padding: 24px 33px 24px 33px;
-  margin-top: 88px;
   font-weight: 600;
   font-size: 18px;
   line-height: 0%;
@@ -121,19 +142,69 @@ h1{
   cursor: pointer;
   background: #252323;
 } 
+
 .mouse-icn{
-  margin-top: 67px;
-  margin-bottom: 78px;
+  margin-bottom: 10px;
+}
+/* Header end */
+
+
+/* Experience start */
+
+.experience{
+  text-align: center;
 }
 
-main{ 
-  height: 600px;
-  width: 100%;
-  background:white;
+.experience h2{
+  margin-top: 90px;
 }
 
-footer {
-  height: 300px;
-  width: 100%;
-  background:black;
+.experience-cards{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 44px;
 }
+
+.experience-desc{
+  width: 240px;
+  margin-bottom: 40px;
+}
+/* Experience end */
+
+/*  Portfolio start */
+
+.portfolio{
+  text-align: center;;
+}
+
+.portfolio h2{
+  margin-top: 40px;
+  margin-bottom: 43px;
+}
+
+.portfolio-tabs{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs-tab:not(:last-child){
+  margin-right: 44px;
+}
+
+.tab-button{
+  padding: 13px 45px 13px 45px;
+  background:transparent;
+  border: 1px solid #E5E5E5;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color:black;
+}
+
+.tab-button:hover{
+  background: rgba(15, 15, 15, 0.95);;
+  color:white;
+  cursor: pointer;
+}
+/*  Portfolio end */
