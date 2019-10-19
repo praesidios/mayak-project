@@ -188,6 +188,7 @@ h1{
 }
 
 .portfolio-tabs{
+  padding: 0;
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -350,10 +351,6 @@ h1{
   justify-content: center;
 }
 
-.photo-wrap{
-  margin: 0 50px 50px 50px;
-}
-
 
 .team-photo-wrap h4 {
   font-size: 22px;
@@ -378,6 +375,42 @@ h1{
 
 .team-photo-wrap button:hover{
   cursor: pointer;
+}
+
+.photo-wrap{
+  margin: 0 50px 50px 50px;
+}
+
+.team-photo{
+  position: relative;
+  width: 330px;
+  height: 300px;
+}
+
+.photo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .4;
+}
+
+.photo-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 332px;
+  height: 300px;
+  background: #3E3E3E;
+  opacity: .8;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.overlay-text{
+  margin-top: 15px;
 }
 
 /* Team end */
