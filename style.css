@@ -254,12 +254,10 @@ h1{
 .achievements{
   background:rgba(15, 15, 15, 0.95);
   text-align: center;
-  padding-top: 90px;
-  padding-bottom: 100px;
+  padding: 90px 130px 60px 130px;
 }
 
 .achievements h2{
-  margin-bottom: 40px;
   font-size: 35px;
   line-height: 43px;
   color: #FFFFFF;
@@ -268,9 +266,11 @@ h1{
 .diploma-wrap{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.diploma:first-child{
-  margin-right: 190px;
+
+.diploma{
+  margin: 40px 90px 40px 90px;
 }
 
 .diploma-wrap img{
@@ -432,6 +432,7 @@ h1{
 
 .materials-used-wrap{
   display: flex;
+  justify-content: center;
 }
 
 .materials-used h2 {
