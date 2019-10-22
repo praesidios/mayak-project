@@ -30,7 +30,7 @@
         <div class="header-contacts-right">
           <p>+375 (44) 469-34-36</p>
           <button>
-            Запись на консультацию
+            <a href="#consultation"> Запись на консультацию</a>
           </button>
         </div>
       </div>
@@ -40,7 +40,9 @@
           <h1>Tattoo mayak</h1>
           <h3>Профессиональное татуирование</h3>
         </div>
-        <button class="whatch-work-but">Посмотреть работы</button>
+        <button class="whatch-work-but">
+          <a href="#portfolio">Посмотреть работы</a> Посмотреть работы
+        </button>
         <div  class="mouse-icn">
           <img src="./img/svg/mouse-icn.svg" alt="mouse">
         </div>
@@ -80,7 +82,7 @@
   <!-- Experience end-->
 
   <!-- Portfolio start-->
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <h2>Работы наших мастеров</h3>
     <ul class="portfolio-tabs">
       <li class="tabs-tab">
@@ -143,7 +145,9 @@
         <img src="./img/price-desc.jpg" alt="price-desc">
       </div>
     </div>
-    <button class="price-button">Записаться на консультацию</button>
+    <button class="price-button">
+      <a href="#consultation">Записаться на консультацию</a> 
+    </button>
   </section>
 
   <!-- Price end-->
@@ -380,6 +384,63 @@
   </section>
 
   <!-- tattoo care end -->
+
+  <!-- consultation form start -->
+
+  <section class="consultation" id="consultation">
+    <h2>Запишитесь на консультацию</h2>
+    <p>Или позвоните нам сами  по номеру +375 (44) 469-34-36</p>
+    <form action="" class="form">
+      <label class="placeinput">
+        <input required type="text" class="consultation-input">
+        <div class="place-holder">Имя<sup>*</sup></div>
+      </label>
+      <label class="placeinput">
+        <input required type="text" class="consultation-input">
+        <div class="place-holder">Телефон<sup>*</sup></div>
+      </label>
+      <label class="placeinput">
+        <input required type="text" class="consultation-input">
+        <div class="place-holder">E-mail<sup>*</sup></div>
+      </label>
+      <span><sup>*</sup>Обязательно для заполнения</span>
+      <label class="confident-form">
+        <input required type="checkbox"  class="confident-checkbox">
+        <span class="fake-box"></span>
+        <span>Отправляя свои данные, вы соглашаетесь с <a href="#!">политикой конфиденциальности</a></span>
+      </label>
+      </div>
+      <button class="price-button">ЗАПИСАТЬСЯ</button>
+    </form>
+  </section>
+  <!-- consultation form end -->
+
+  <!-- map start -->
+
+  <section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813.9074058277395!2d27.480233335976695!3d53.87226187996319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda9c2b38c563%3A0xaf1efb79e39179aa!2z0YPQu9C40YbQsCDQkNC70LjQsdC10LPQvtCy0LAgMTLQsSwg0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1571747849973!5m2!1sru!2sby"></iframe>
+    <div class="map-contactns">
+      <ul>
+        <li>
+          <img src="./img/svg/map.svg" alt="map">
+          <span>Минск, улица Алибегова 12б </span>
+        </li>
+        <li>
+          <img src="./img/svg/mail.svg" alt="mail">
+          <span>mayak.tattoo.minsk@gmail.com </span>
+        </li>
+        <li>
+          <img src="./img/svg/telephone.svg" alt="telephone">
+          <span>+375 (44) 469-34-36</span>
+        </li>
+        <li>
+          <img src="./img/svg/colend.svg" alt="colend">
+          <span>Пн-Вс 10:00-20:00</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- map end -->
 </main>
 </body>
 </html>

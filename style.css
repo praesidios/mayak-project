@@ -10,6 +10,7 @@ body {
 
 a{
   text-decoration: none;
+  color: #FFF;
 }
 
 button{
@@ -46,8 +47,6 @@ h2 {
 }
 
 .fullscreen-video-wrap  video {
- /* min-width: 100%;
- min-height: 100%; */
  width: 100%;
  height: auto;
  position: absolute;
@@ -612,3 +611,156 @@ h1{
 }
 
 /* tattoo care end */
+
+
+/* consultation form start */
+
+.consultation{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding: 0 130px 100px 130px;
+}
+
+.consultation h2{
+  margin-bottom: 10px;
+}
+
+.consultation p{
+  margin-bottom: 50px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 484px;
+}
+
+.placeinput{
+  position: relative;
+}
+
+.place-holder{
+  position: absolute;
+  left: 21px;
+  top: 16px;
+  cursor: text;   
+  width: 20%;    
+  display: none;
+  color: lightgrey;
+  z-index: 5;
+}
+
+.consultation-input:invalid + .place-holder {
+  display: inline;
+}
+
+.consultation-input{
+  width: 100%;
+  height: 58px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  background: #E5E5E5;
+  opacity: 0.4;
+  border: 1px solid rgba(15, 15, 15, 0.5);
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+sup{
+  color:red;
+}
+
+.form>span {
+  margin-bottom: 15px;
+}
+
+.confident-checkbox{
+  display: none;
+}
+
+.fake-box{
+  display: inline-block;
+  position: relative;
+  width: 14px;
+  height: 14px; 
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  vertical-align: top;
+}
+
+.fake-box::before{
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  opacity: 0;
+  transition: .2s;
+}
+
+.fake-box:hover{
+  cursor: pointer;
+}
+.confident-checkbox:checked + .fake-box::before{
+  opacity: 1;
+}
+
+.confident-form a{
+  color: black;
+  text-decoration: underline;
+}
+
+.form button {
+  margin-top: 50px;
+  align-self: center;
+  width: 230px;
+  font-size: 16px;
+}
+
+/* consultation form end */
+
+/* map start */
+
+.map{
+  position: relative;
+}
+
+iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  border:0px;
+  z-index: 1;
+}
+
+.map-contactns{
+  position: absolute;
+  left: 100px;
+  top: 130px;
+  background: #fff;
+  padding: 50px;
+  z-index: 3;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.map-contactns span {
+  vertical-align: super;
+  margin-left: 15px;
+}
+
+.map-contactns li:last-child{
+  margin-bottom: 0;
+}
+/* map end  */
