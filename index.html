@@ -12,7 +12,7 @@
 <body>
 <!-- Header start -->
 
-<header class="header">
+<header class="header" id="header">
   <div class="fullscreen-video-wrap">
     <video src="./mayak.mp4" muted="muted" autoplay loop></video>
   </div>
@@ -40,9 +40,9 @@
         <h1>Tattoo mayak</h1>
         <h3>Профессиональное татуирование</h3>
       </div>
-      <button class="whatch-work-but">
-        <a href="#portfolio">Посмотреть работы</a>
-      </button>
+      <a class="whatch-work-but" href="#portfolio">
+        Посмотреть работы
+      </a>
       <div  class="mouse-icn">
         <img src="./img/svg/mouse-icn.svg" alt="mouse">
       </div>
@@ -88,10 +88,10 @@
     <h2>Работы наших мастеров</h3>
     <ul class="portfolio-tabs">
       <li class="tabs-tab">
-        <button class="tab-button">Реализм</button>
+        <button class="tab-button ">Реализм</button>
       </li>
       <li class="tabs-tab">
-        <button class="tab-button">Трад/неотрад</button>
+        <button class="tab-button ">Трад/неотрад</button>
       </li>
       <li class="tabs-tab">
         <button class="tab-button">Япония</button>
@@ -101,12 +101,12 @@
       </li>
     </ul>
     <div class="portfolio-pic-wrap">
-      <img src="./img/portfolio/realism/eyes.png" alt="eyes" class="portfolio-pic">
-      <img src="./img/portfolio/realism/samurai.png" alt="samurai" class="portfolio-pic">
-      <img src="./img/portfolio/realism/boodha.png" alt="boodha" class="portfolio-pic">
-      <img src="./img/portfolio/realism/bear.png" alt="bear" class="portfolio-pic">
-      <img src="./img/portfolio/realism/samurai2.png" alt="samurai2" class="portfolio-pic">
-      <img src="./img/portfolio/realism/dog.png" alt="dog" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism1.png" alt="eyes" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism2.png" alt="samurai" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism3.png" alt="boodha" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism4.png" alt="bear" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism5.png" alt="samurai2" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism6.png" alt="dog" class="portfolio-pic">
     </div>
   </section>
   <!-- Portfolio end-->
@@ -144,12 +144,15 @@
         <p>Заживление входит в стоимость</p>
       </div>
       <div class="wrap-low">
-        <img src="./img/price-desc.jpg" alt="price-desc">
+        <h4>Так же у нас вы можете приобрести сертификат на любую сумму</h4>
+        <p>Чтобы получить сертификат необходимо написать нам в соц.сети или позвонить.</p>
+        <p>Мы его доставим в пределах Минска <span class="red-star">*</span> Бесплатно.</p>
+        <p><span class="red-star">*</span>Доставка за МКАД отправляется почтой, издержки за платежи ложатся на заказчика</p>
       </div>
     </div>
-    <button class="price-button">
-      <a href="#consultation">Записаться на консультацию</a> 
-    </button>
+    <a class="price-button" href="#consultation">
+      Записаться на консультацию
+    </a> 
   </section>
 
   <!-- Price end-->
@@ -229,9 +232,9 @@
   <section class="materials-used">
     <h2>Используем только качественные материалы</h2>
     <div class="materials-used-wrap">
-      <div class="equipment wrap-content">
-        <img src="./img/svg/machine.svg" alt="machine">
+      <div class="equipment">
         <div class="materials-used-desc">
+          <img src="./img/svg/machine.svg" alt="machine">
           <h4>Профессиональное и чистое оборудование</h4>
           <p>В работе с клиентом мастера используют профессиональное оборудование только ведущих производителей, которые зарекомендовали себя лучшими на рынке.</p>
           <ul>
@@ -242,18 +245,16 @@
             <li>Cheyenne (Германия)</li>
           </ul>
         </div>
-      </div>
-      <div class="materials-used-img-wrap">
         <div class="machine-img">
           <img src="./img/machine.png" alt="machine">
         </div>
+      </div>
+      <div class="paints">
         <div class="paints-img">
           <img src="./img/paints.png" alt="paints">
         </div>
-      </div>
-      <div class="paints wrap-content">
-        <img src="./img/svg/paints.svg" alt="paints">
         <div class="materials-used-desc">
+          <img src="./img/svg/paints.svg" alt="paints">
           <h4>Пигменты для татуировки </h4>
           <p>Качество и долговременность татуировки зависит от правильно подобранной краски и должного ухода. В нашем распоряжении краски с высококачественными пигментами таких производителей,как:</p>
           <ul>
@@ -395,15 +396,15 @@
     <form action="" class="form">
       <label class="placeinput">
         <input required type="text" class="consultation-input">
-        <div class="place-holder">Имя<sup>*</sup></div>
+        <div class="place-holder">Имя<span class="red-star">*</span></div>
       </label>
       <label class="placeinput">
         <input required type="text" class="consultation-input">
-        <div class="place-holder">Телефон<sup>*</sup></div>
+        <div class="place-holder">Телефон<span class="red-star">*</span></div>
       </label>
       <label class="placeinput">
         <input type="text" class="consultation-input">
-        <div class="place-holder">E-mail</div>
+        <div class="place-holder">E-mail</div>   
       </label>
       <span><sup>*</sup>Обязательно для заполнения</span>
       <label class="confident-form">
@@ -420,29 +421,33 @@
   <!-- map start -->
 
   <section class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813.9074058277395!2d27.480233335976695!3d53.87226187996319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda9c2b38c563%3A0xaf1efb79e39179aa!2z0YPQu9C40YbQsCDQkNC70LjQsdC10LPQvtCy0LAgMTLQsSwg0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1571747849973!5m2!1sru!2sby"></iframe>
     <div class="map-contactns">
-      <ul>
-        <li>
-          <img src="./img/svg/map.svg" alt="map">
-          <span>Минск, улица Алибегова 12б </span>
-        </li>
-        <li>
-          <img src="./img/svg/mail.svg" alt="mail">
-          <span>mayak.tattoo.minsk@gmail.com </span>
-        </li>
-        <li>
-          <img src="./img/svg/telephone.svg" alt="telephone">
-          <span>+375 (44) 469-34-36</span>
-        </li>
-        <li>
-          <img src="./img/svg/colend.svg" alt="colend">
-          <span>Пн-Вс 10:00-20:00</span>
-        </li>
-      </ul>
-    </div>
+        <ul>
+          <li>
+            <img src="./img/svg/map.svg" alt="map">
+            <span>Минск, улица Алибегова 12б </span>
+          </li>
+          <li>
+            <img src="./img/svg/mail.svg" alt="mail">
+            <span>mayak.tattoo.minsk@gmail.com </span>
+          </li>
+          <li>
+            <img src="./img/svg/telephone.svg" alt="telephone">
+            <span>+375 (44) 469-34-36</span>
+          </li>
+          <li>
+            <img src="./img/svg/colend.svg" alt="colend">
+            <span>Пн-Вс 10:00-20:00</span>
+          </li>
+        </ul>
+      </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813.9074058277395!2d27.480233335976695!3d53.87226187996319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbda9c2b38c563%3A0xaf1efb79e39179aa!2z0YPQu9C40YbQsCDQkNC70LjQsdC10LPQvtCy0LAgMTLQsSwg0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1571747849973!5m2!1sru!2sby"></iframe>
   </section>
   <!-- map end -->
+
+  <a href="#header" class="arrow-top">
+    <img src="./img/svg/arrow-up.svg" alt="arrow-up">
+  </a>
 </main>
 
 
@@ -463,5 +468,6 @@
   </div>
   <div>© 2019 MAYAK TATTOO - Все права защищены</div>
 </footer>
-</body>
+<script  src="./js/script.js"></script>
+</body>s
 </html>
