@@ -113,7 +113,7 @@ min-height: 100%;
   
 }
 
-.header-contacts-right button {
+.header-contacts-right a {
   background: transparent;
   border-bottom: 1px dashed #ffffffa6;
   padding: 0;
@@ -211,7 +211,7 @@ h1{
   margin-bottom: 43px;
 }
 
-.portfolio-tabs{
+.tabs{
   padding: 0;
   margin-bottom: 40px;
   list-style-type: none;
@@ -224,7 +224,7 @@ h1{
   margin-right: 40px;
 }
 
-.tab-button{
+button{
   padding: 13px 45px 13px 45px;
   background:transparent;
   border: 1px solid #E5E5E5;
@@ -234,16 +234,17 @@ h1{
   color:black;
 }
 
-.portfolio-active-tab{
+button.active-tab{
   padding: 13px 45px 13px 45px;
   background:rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(15, 15, 15, 0.95);
   font-size: 16px;
   line-height: 20px;
   font-weight: 600;
   color:white;
 }
 
-.tab-button:hover{
+button:hover{
   background: rgba(15, 15, 15, 0.95);
   color:white;
   cursor: pointer;
@@ -252,24 +253,24 @@ h1{
 .portfolio-pic-wrap {
   width: 1100px;
   height: 760px;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-around;
   box-sizing: border-box;
   overflow: auto;
 }
 
-.portfolio-pic-wrap::-webkit-scrollbar{
-  width: 7px;
+.portfolio-pic-wrap.active-tab {
+  display: flex;
 }
 
-.portfolio-pic-wrap::-webkit-scrollbar-track{
-  background: rgb(177, 175, 175);
+.portfolio-pic-wrap::-webkit-scrollbar{
+  width: 5px;
 }
 
 .portfolio-pic-wrap::-webkit-scrollbar-thumb{
   background: rgba(15, 15, 15, 0.8);
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .portfolio-pic{
@@ -432,9 +433,12 @@ h1{
 }
 
 .team-photo-wrap button {
-  background: transparent; 
+  background: transparent;
+  border:none;
+  color:white; 
   font-size: 16px;
   line-height: 20px;
+  font-weight: normal;
   text-decoration-line: underline;
 }
 
@@ -546,7 +550,8 @@ h1{
 .tattoo-healing{
   text-align: center;
   margin-top: 45px;
-  display: block;
+  display: none;
+  flex-direction: column;
 }
 
 .tattoo-healing>p{
@@ -669,6 +674,10 @@ h1{
   margin-bottom: 15px;
 }
 
+
+.wrapTattooCare.active-tab{
+  display:flex;
+}
 /* tattoo care end */
 
 
@@ -779,6 +788,7 @@ h1{
   align-self: center;
   width: 230px;
   font-size: 16px;
+  color:white;
 }
 
 /* consultation form end */
@@ -870,7 +880,7 @@ ul{
 
 @keyframes move{
   0% {
-    transform: translateY(0px);;
+    transform: translateY(0px);
   }
   50% {
     transform: translateY(-10px);

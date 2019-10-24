@@ -23,56 +23,49 @@ window.addEventListener('scroll', function(){
 
 
 //portfolio section start 
+let activeTabIndex ;
 
-const portfolio = {
-  realism: [
-    "../img/portfolio/realism/realism1.png",
-    "../img/portfolio/realism/realism2.png",
-    "../img/portfolio/realism/realism3.png",
-    "../img/portfolio/realism/realism4.png",
-    "../img/portfolio/realism/realism5.png",
-    "../img/portfolio/realism/realism6.png"
-  ],
-  
-  trad: [
-    "../img/portfolio/trad/trad1.png",
-    "../img/portfolio/trad/trad2.png",
-    "../img/portfolio/trad/trad3.png",
-    "../img/portfolio/trad/trad4.png",
-    "../img/portfolio/trad/trad5.png",
-    "../img/portfolio/trad/trad6.png"
-  ],
-  
-  japan: [
-    "../img/portfolio/japan/japan1.png",
-    "../img/portfolio/japan/japan2.png",
-    "../img/portfolio/japan/japan3.png",
-    "../img/portfolio/japan/japan4.png",
-    "../img/portfolio/japan/japan5.png",
-    "../img/portfolio/japan/japan6.png",
-  ],
-  
-  graphic: [
-    "../img/portfolio/graphic/graphic1.png",
-    "../img/portfolio/graphic/graphic2.png",
-    "../img/portfolio/graphic/graphic3.png",
-    "../img/portfolio/graphic/graphic4.png",
-    "../img/portfolio/graphic/graphic5.png",
-    "../img/portfolio/graphic/graphic6.png",
-  ]
-};
+const tabPortfolio = document.querySelectorAll('.tab-button');
+const portfolioPicWrap = document.querySelectorAll('.portfolio-pic-wrap');
 
-const tabButtons = document.querySelectorAll('.portfolio-tabs .tab-button');
-const portfolioPicWrap = document.querySelector('.portfolio-pic-wrap');
 
-tabButtons.forEach(tab=>{
-  tab.addEventListener('click', ()=>{
-    tabButtons.forEach(activeBut =>{
-      activeBut.classList.remove('portfolio-active-tab');
-      activeBut.className = 'tab-button';
-    })
-    console.log(tabButtons)
-    tab.className = 'portfolio-active-tab';
-  })
-})
+function selectActiveTab(arrayTabs, arrayWrapper){
+  arrayTabs.forEach(tab => {
+    tab.addEventListener('click', selectTab)
+  });
+  
+  function selectTab(){
+    arrayTabs.forEach(activeTab => {
+      activeTab.classList.remove('active-tab');
+    });
+    activeTabIndex = this.getAttribute('data-tab-name');
+    this.classList.add('active-tab');
+    selectPicWrapper(activeTabIndex);
+  }
+  
+  
+  const selectPicWrapper = (activeTabIndex) => {
+    arrayWrapper.forEach(item =>{
+      item.classList.contains(activeTabIndex) ? item.classList.add('active-tab') :
+      item.classList.remove('active-tab')
+    });
+  };
+}
+
+selectActiveTab(tabPortfolio, portfolioPicWrap);
+
 //portfolio section end 
+
+
+
+
+// tattoo care start
+
+const tabTattooCare = document.querySelectorAll('.care-tab');
+const wrapTattooCare = document.querySelectorAll('.wrapTattooCare');
+
+selectActiveTab(tabTattooCare, wrapTattooCare);
+
+// tattoo care end
+
+

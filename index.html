@@ -29,9 +29,7 @@
       </div>
       <div class="header-contacts-right">
         <p>+375 (44) 469-34-36</p>
-        <button>
-          <a href="#consultation"> Запись на консультацию</a>
-        </button>
+        <a href="#consultation"> Запись на консультацию</a>
       </div>
     </div>
     <div class="header-intro">
@@ -86,27 +84,51 @@
   <!-- Portfolio start-->
   <section class="portfolio" id="portfolio">
     <h2>Работы наших мастеров</h3>
-    <ul class="portfolio-tabs">
+    <ul class="tabs">
       <li class="tabs-tab">
-        <button class="tab-button ">Реализм</button>
+        <button class="tab-button  active-tab" data-tab-name="realism">Реализм</button>
       </li>
       <li class="tabs-tab">
-        <button class="tab-button ">Трад/неотрад</button>
+        <button class="tab-button" data-tab-name="trad">Трад/неотрад</button>
       </li>
       <li class="tabs-tab">
-        <button class="tab-button">Япония</button>
+        <button class="tab-button" data-tab-name="japan">Япония</button>
       </li>
       <li class="tabs-tab">
-        <button class="tab-button">Графика</button>
+        <button class="tab-button" data-tab-name="graphic">Графика</button>
       </li>
     </ul>
-    <div class="portfolio-pic-wrap">
-      <img src="./img/portfolio/realism/realism1.png" alt="eyes" class="portfolio-pic">
-      <img src="./img/portfolio/realism/realism2.png" alt="samurai" class="portfolio-pic">
-      <img src="./img/portfolio/realism/realism3.png" alt="boodha" class="portfolio-pic">
-      <img src="./img/portfolio/realism/realism4.png" alt="bear" class="portfolio-pic">
-      <img src="./img/portfolio/realism/realism5.png" alt="samurai2" class="portfolio-pic">
-      <img src="./img/portfolio/realism/realism6.png" alt="dog" class="portfolio-pic">
+    <div class="portfolio-pic-wrap active-tab realism">
+      <img src="./img/portfolio/realism/realism1.png" alt="realism1" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism2.png" alt="realism2" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism3.png" alt="realism3" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism4.png" alt="realism4" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism5.png" alt="realism5" class="portfolio-pic">
+      <img src="./img/portfolio/realism/realism6.png" alt="realism6" class="portfolio-pic">
+    </div>
+    <div class="portfolio-pic-wrap trad">
+      <img src="./img/portfolio/trad/trad1.png" alt="trad1" class="portfolio-pic">
+      <img src="./img/portfolio/trad/trad2.png" alt="trad2" class="portfolio-pic">
+      <img src="./img/portfolio/trad/trad3.png" alt="trad3" class="portfolio-pic">
+      <img src="./img/portfolio/trad/trad4.png" alt="trad4" class="portfolio-pic">
+      <img src="./img/portfolio/trad/trad5.png" alt="trad5" class="portfolio-pic">
+      <img src="./img/portfolio/trad/trad6.png" alt="trad6" class="portfolio-pic">
+    </div>
+    <div class="portfolio-pic-wrap japan">
+      <img src="./img/portfolio/japan/japan1.png" alt="japan1" class="portfolio-pic">
+      <img src="./img/portfolio/japan/japan2.png" alt="japan2" class="portfolio-pic">
+      <img src="./img/portfolio/japan/japan3.png" alt="japan3" class="portfolio-pic">
+      <img src="./img/portfolio/japan/japan4.png" alt="japan4" class="portfolio-pic">
+      <img src="./img/portfolio/japan/japan5.png" alt="japan5" class="portfolio-pic">
+      <img src="./img/portfolio/japan/japan6.png" alt="japan6" class="portfolio-pic">
+    </div>
+    <div class="portfolio-pic-wrap graphic">
+      <img src="./img/portfolio/graphic/graphic1.png" alt="graphic1" class="portfolio-pic">
+      <img src="./img/portfolio/graphic/graphic2.png" alt="graphic2" class="portfolio-pic">
+      <img src="./img/portfolio/graphic/graphic3.png" alt="graphic3" class="portfolio-pic">
+      <img src="./img/portfolio/graphic/graphic4.png" alt="graphic4" class="portfolio-pic">
+      <img src="./img/portfolio/graphic/graphic5.png" alt="graphic5" class="portfolio-pic">
+      <img src="./img/portfolio/graphic/graphic6.png" alt="graphic6" class="portfolio-pic">
     </div>
   </section>
   <!-- Portfolio end-->
@@ -273,15 +295,15 @@
   
   <section class="tattoo-care">
     <h2>Уход за татуировкой</h2>
-    <ul class="portfolio-tabs">
+    <ul class="tabs">
       <li class="tabs-tab">
-        <button class="tab-button">Заживление</button>
+        <button class="care-tab active-tab" data-tab-name="healing">Заживление</button>
       </li>
       <li class="tabs-tab">
-        <button class="tab-button">Татуировка</button>
+        <button class="care-tab" data-tab-name="meaning">Татуировка</button>
       </li>
     </ul>
-    <div class="tattoo-healing">
+    <div class="wrapTattooCare active-tab healing tattoo-healing">
       <h3>Заживление</h3>
       <p>Ваша новая татуировка яркими цветами гордо красуется на теле: наша задача – сохранить этот эффект навсегда. </p>
       <div class="healing-tutorial">  
@@ -362,7 +384,7 @@
         </div>
       </div>
     </div>
-    <div class="tatto-meaning">
+    <div class="wrapTattooCare meaning tatto-meaning" id="">
       <div class="meaning-left">
         <div class="text-meaning-left">
           <h4>Для кого?</h4>
@@ -406,7 +428,7 @@
         <input type="text" class="consultation-input">
         <div class="place-holder">E-mail</div>   
       </label>
-      <span><sup>*</sup>Обязательно для заполнения</span>
+      <span><span class="red-star">*</span>Обязательно для заполнения</span>
       <label class="confident-form">
         <input required type="checkbox"  class="confident-checkbox">
         <span class="fake-box"></span>
