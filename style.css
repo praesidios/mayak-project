@@ -203,8 +203,10 @@ h1{
 /*  Portfolio start */
 
 .portfolio{
-  text-align: center;
   padding: 0 130px 100px 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .portfolio h2{
@@ -251,8 +253,8 @@ button:hover{
 }
 
 .portfolio-pic-wrap {
-  width: 1100px;
-  height: 760px;
+  max-width: 1100px;
+  max-height: 760px;
   display: none;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -284,9 +286,6 @@ button:hover{
   cursor: zoom-in;
 }
 
-.portfolio-pic:active{
-  transform: scale(1.5, 1.5);
-}
 /*  Portfolio end */
 
 /*  Achievements start */
@@ -838,6 +837,9 @@ ul{
 /* map end  */
 
 
+
+/* Other start */
+
 .arrow-top{
   width: 60px;
   height: 60px;
@@ -853,6 +855,52 @@ ul{
   transition: 1s;
 }
 
+.modal-win{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:rgba(0, 0, 0, 0.8);
+  animation: zoomIn .2s ease-in;
+  z-index: 10;
+}
+
+
+.close.clode-img{
+  align-self: flex-end;
+  width: 30px;
+  height: 30px;
+  padding-top: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+
+.close:hover{
+  cursor: pointer;
+}
+
+#modal-img{
+  max-width: 700px;
+  width: 700px;
+  height: auto;
+}
+
+
+.team-profile{
+  max-width: 800px;
+  width: 800px;
+  height: 100%;
+  background: white;
+  padding: 15px;
+  display: flex;
+}
+
+/* Other end */
 
 .footer{
   padding: 40px 110px 10px 110px;
@@ -891,5 +939,21 @@ ul{
 }
 
 
+@keyframes zoomIn{
+  /* 0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  } */
 
+   0% {
+    transform: scale(0.1);
+    width: 50%;
+  }
+  100% {
+    transform: scale(1);
+    width: 100%;
+  }
+}
 

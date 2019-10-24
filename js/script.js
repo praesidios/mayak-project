@@ -69,3 +69,46 @@ selectActiveTab(tabTattooCare, wrapTattooCare);
 // tattoo care end
 
 
+//modal-win start
+
+const portfolioPic = document.querySelectorAll('.portfolio-pic');
+const modalWin = document.querySelector('.modal-win');
+const close = document.querySelector('.close');
+const modalImg = document.querySelector('#modal-img');
+
+
+portfolioPic.forEach(img =>{
+  img.addEventListener('click',setImgInModal);
+});
+close.addEventListener('click', closeModal);
+
+
+
+function setImgInModal(){
+  modalWin.style.display = "flex";
+  modalImg.src = this.src;
+  modalImg.alt = this.alt;
+  arrowTop.style.display  = "none";
+}
+
+function closeModal(){
+  modalWin.style.display = "none";
+  arrowTop.style.display  = "flex";
+}
+
+//modal-win end
+
+//modal profile start
+
+const linkToProfile = document.querySelectorAll('.click-to-profile');
+const profileAva = document.querySelector('.profile-ava');
+
+linkToProfile.forEach(img =>{
+  img.addEventListener('click',getProfile);
+});
+
+function getProfile(){
+  modalWin.style.display = "flex";
+  arrowTop.style.display  = "none";
+}
+//modal profile end
