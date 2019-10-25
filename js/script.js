@@ -98,7 +98,7 @@ function setImgInModal(){
 
 function closeModal(modal){
   modal.style.display = "none";
-  arrowTop.style.display  = "flex";
+  
 }
 
 close();
@@ -142,6 +142,7 @@ function closeProfileFunc (){
       modalProfiles.forEach(profile =>{
           profile.classList.remove('selected-profile');
       });
+      arrowTop.style.display  = "flex";
     });
   });
 }
