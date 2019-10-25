@@ -266,11 +266,13 @@ button:hover{
   display: flex;
 }
 
-.portfolio-pic-wrap::-webkit-scrollbar{
+.portfolio-pic-wrap::-webkit-scrollbar,
+.profile-pic-wrapper::-webkit-scrollbar{
   width: 5px;
 }
 
-.portfolio-pic-wrap::-webkit-scrollbar-thumb{
+.portfolio-pic-wrap::-webkit-scrollbar-thumb,
+.profile-pic-wrapper::-webkit-scrollbar-thumb{
   background: rgba(15, 15, 15, 0.8);
   border-radius: 2px;
 }
@@ -484,7 +486,7 @@ button:hover{
 /* materials-used start */
 
 .materials-used{
-  padding: 90px 130px 70px 130px;
+  padding: 90px 10% 70px 10%;
 }
 
 .materials-used-wrap{
@@ -645,11 +647,12 @@ button:hover{
   padding: 40px 0px 90px 0px;
   display: none;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .text-meaning-left {
   width: 530px;
+  padding: 2%;
 }
 
 .text-meaning-left h4{
@@ -673,7 +676,9 @@ button:hover{
   margin-bottom: 15px;
 }
 
-
+.meaning-rigth{
+  padding: 2%;
+}
 .wrapTattooCare.active-tab{
   display:flex;
 }
@@ -855,9 +860,8 @@ ul{
   transition: 1s;
 }
 
-.modal-win{
+.modal{
   display: none;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -867,37 +871,92 @@ ul{
   left: 0;
   background:rgba(0, 0, 0, 0.8);
   animation: zoomIn .2s ease-in;
+}
+.modal-win{
+  z-index: 15;
+}
+.modal-profile{
   z-index: 10;
 }
 
-
-.close.clode-img{
-  align-self: flex-end;
-  width: 30px;
-  height: 30px;
-  padding-top: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
+.selected-profile{
+  display: flex;
 }
 
-.close:hover{
+.close-img{
+  align-self: flex-start;
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+}
+
+.close-img:hover, .close-profile:hover{
   cursor: pointer;
 }
 
 #modal-img{
-  max-width: 700px;
-  width: 700px;
-  height: auto;
+  flex: 0 1 650px;
+  height: 95%;
 }
 
 
+
 .team-profile{
-  max-width: 800px;
-  width: 800px;
-  height: 100%;
+  flex: 0 1 700px;
+  max-height: 95%;
+  min-height: 60%;
   background: white;
-  padding: 15px;
+  padding: 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.close-profile{
+  align-self: flex-end;
+  width: 20px;
+}
+
+
+.profile-desc{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap:wrap;
+  width: 100%;
+}
+
+
+.profile-ava{
+  width: 200px;
+  height: 200px;
+}
+
+.profile-text{
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  flex-grow: 1;
+}
+.profile-text h3,.profile-text span{
+  margin-bottom: 10px;
+}
+
+.profile-text h3{
+  font-size: 25px;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+}
+
+.profile-pic-wrapper{
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
 /* Other end */
@@ -940,20 +999,18 @@ ul{
 
 
 @keyframes zoomIn{
-  /* 0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-  } */
 
    0% {
     transform: scale(0.1);
     width: 50%;
+    top:25%;
+    left:25%;
   }
   100% {
     transform: scale(1);
     width: 100%;
+    top:0;
+    left:0;
   }
 }
 

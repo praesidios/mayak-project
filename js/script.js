@@ -23,6 +23,7 @@ window.addEventListener('scroll', function(){
 
 
 //portfolio section start 
+
 let activeTabIndex ;
 
 const tabPortfolio = document.querySelectorAll('.tab-button');
@@ -73,16 +74,20 @@ selectActiveTab(tabTattooCare, wrapTattooCare);
 
 const portfolioPic = document.querySelectorAll('.portfolio-pic');
 const modalWin = document.querySelector('.modal-win');
-const close = document.querySelector('.close');
+const closeImg = document.querySelector('.close-img');
 const modalImg = document.querySelector('#modal-img');
 
 
 portfolioPic.forEach(img =>{
   img.addEventListener('click',setImgInModal);
 });
-close.addEventListener('click', closeModal);
 
 
+const close = ()=>{
+  closeImg.addEventListener('click', ()=>{
+    closeModal(modalWin);
+  });
+}
 
 function setImgInModal(){
   modalWin.style.display = "flex";
@@ -91,24 +96,59 @@ function setImgInModal(){
   arrowTop.style.display  = "none";
 }
 
-function closeModal(){
-  modalWin.style.display = "none";
+function closeModal(modal){
+  modal.style.display = "none";
   arrowTop.style.display  = "flex";
 }
 
+close();
 //modal-win end
+
+
 
 //modal profile start
 
 const linkToProfile = document.querySelectorAll('.click-to-profile');
-const profileAva = document.querySelector('.profile-ava');
+const modalProfiles = document.querySelectorAll('.modal-profile');
+const closeProfile = document.querySelectorAll('.close-profile');
+let selectedProfile;
 
-linkToProfile.forEach(img =>{
-  img.addEventListener('click',getProfile);
-});
+
+
+function linkToProfileFunc(){
+  linkToProfile.forEach(link =>{
+    link.addEventListener('click',getProfile);
+  });  
+}
 
 function getProfile(){
-  modalWin.style.display = "flex";
+  selectedProfile = this.getAttribute('data-profile');
   arrowTop.style.display  = "none";
+  setSelectedProfileAtrb(selectedProfile);
 }
+
+  
+function setSelectedProfileAtrb(selectedProfile){
+  modalProfiles.forEach(profile =>{
+    if(profile.classList.contains(selectedProfile)){
+      profile.classList.add('selected-profile');
+    }
+  });
+};
+
+function closeProfileFunc (){
+  closeProfile.forEach(but =>{
+    but.addEventListener('click', ()=>{
+      modalProfiles.forEach(profile =>{
+          profile.classList.remove('selected-profile');
+      });
+    });
+  });
+}
+
+closeProfileFunc ();
+linkToProfileFunc();
+
 //modal profile end
+
+
