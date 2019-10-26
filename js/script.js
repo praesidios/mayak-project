@@ -152,4 +152,3 @@ linkToProfileFunc();
 
 //modal profile end
 
-

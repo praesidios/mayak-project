@@ -418,28 +418,39 @@
   <section class="consultation" id="consultation">
     <h2>Запишитесь на консультацию</h2>
     <p>Или позвоните нам сами  по номеру +375 (44) 469-34-36</p>
-    <form action="" class="form">
+    <form class="form">
+
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="MAYAK TATTOO">
+    <input type="hidden" name="admin_email" value="arikkushi@mail.ru">
+    <input type="hidden" name="form_subject" value="Form about footer">
+    <!-- END Hidden Required Fields -->
+
+
+
       <label class="placeinput">
-        <input required type="text" class="consultation-input" >
+        <input name="Имя" required type="text" class="consultation-input" >
         <div class="place-holder">Имя<span class="red-star">*</span></div>
       </label>
       <label class="placeinput">
-        <input required type="text" class="consultation-input">
+        <input name="Телефон" required type="text" class="consultation-input">
         <div class="place-holder">Телефон<span class="red-star">*</span></div>
       </label>
       <label class="placeinput">
-        <input type="email" class="consultation-input" placeholder="E-mail">  
+        <input name="email" type="email" class="consultation-input" placeholder="E-mail">  
       </label>
       <span><span class="red-star">*</span>Обязательно для заполнения</span>
       <label class="confident-form">
-        <input required type="checkbox"  class="confident-checkbox">
+        <input name="Соглашение" required type="checkbox"  class="confident-checkbox">
         <span class="fake-box"></span>
         <span>Отправляя свои данные, вы соглашаетесь с <a href="#!">политикой конфиденциальности</a></span>
       </label>
       </div>
-      <button class="price-button">ЗАПИСАТЬСЯ</button>
+      <button type="submit" class="price-button">ЗАПИСАТЬСЯ</button>
     </form>
   </section>
+
+ 
   <!-- consultation form end -->
 
   <!-- map start -->
@@ -639,6 +650,9 @@
   </div>
 </footer>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./js/main.js"></script>
 <script  src="./js/script.js"></script>
 </body>
 </html>
