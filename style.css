@@ -189,7 +189,7 @@ h1{
 
 .experience{
   text-align: center;
-  padding:90px 10% 90px 10%; 
+  padding:10%; 
 }
 .experience-card {
   width: 240px;
@@ -257,16 +257,14 @@ button{
   line-height: 20px;
   font-weight: 600;
   color:black;
+  white-space: nowrap;
 }
 
 button.active-tab{
-  padding: 13px 45px 13px 45px;
   background:rgba(15, 15, 15, 0.95);
   border: 1px solid rgba(15, 15, 15, 0.95);
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
   color:white;
+  
 }
 
 button:hover{
@@ -318,12 +316,10 @@ button:hover{
 .achievements{
   background:rgba(15, 15, 15, 0.95);
   text-align: center;
-  padding: 90px 130px 60px 130px;
+  padding: 10% 7%;
 }
 
 .achievements h2{
-  font-size: 35px;
-  line-height: 43px;
   color: #FFFFFF;
 }
 
@@ -513,7 +509,7 @@ button:hover{
 /* materials-used start */
 
 .materials-used{
-  padding: 90px 10% 70px 10%;
+  padding: 5% 10% 5% 10%;
 }
 
 .materials-used h2 {
@@ -688,8 +684,8 @@ button:hover{
 }
 
 
-.tatto-meaning{
-  padding: 40px 0px 90px 0px;
+.tattoo-meaning{
+  padding: 5% 0px 7% 0px;
   display: none;
   flex-wrap: wrap;
   justify-content: center;
@@ -736,7 +732,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   align-items:center;
-  padding: 0 10% 100px 10%;
+  padding: 0 10% 7% 10%;
 }
 
 .consultation h2{
@@ -1114,6 +1110,10 @@ ul{
   }
 
   /* header */
+  .fullscreen-video-wrap{
+    display: none;
+  }
+
   .header-text h3 {
     font-size: 16px;
   }
@@ -1147,18 +1147,112 @@ ul{
   
 
   /* portfolio */
-  .tabs{
-    padding: 10px;
-    flex-wrap:wrap;
+ 
+  .portfolio ul li button{
+    padding: 10px 15px;
+    font-size: 12px;
   }
+  
    /* portfolio */
 
+
+   /* materials used */
+  .materials-used-wrap{
+    flex-wrap: wrap;
+  }
+
+  .equipment{
+    margin-bottom: 7%;
+  }
+   /* materials used */
+
+   /* tattoo care */
+   .tutorial-img{
+    display: none;
+   }
+
+   .tutorial-guid {
+    max-width: 500px;
+    width: 100%;
+    padding-bottom: 5%;
+   }
+   .text-meaning-left, .text-meaning-rigth img{
+    width: 100%;
+   }
+  
+   /* tattoo care */
+
+
   /* map */
+  iframe{
+    position: static;
+  }
   .map-contactns{
-    width: 320px;
-    height: 200px;  
+    position: static;
+    width: 100%;  
   }
   /* map */
 
+}
+
+
+@media screen and (max-width: 480px){
+
+  h1{
+    font-size: 30px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  
+  /* header */
+  .whatch-work-but, .mouse-icn img{
+    display: none;
+  }
+  /* header */
+
+  /* experience */
+  .experience{
+    padding: 5%;
+  }
+  /* experience */
+
+  /* poetfolio */
+
+  .portfolio {
+    padding: 5%;
+  }
+  .portfolio h2 {
+    margin-bottom: 20px;
+  }
+
+  .portfolio ul li button{
+    padding:10px;
+    font-size: 12px;
+  }
+
+  .portfolio-pic-wrap {
+    max-height: 330px;
+  }
+ 
+  /* poetfolio */
+
+  /* price */
+  .price-button{
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  /* price */
+  
+  /* tatto care */
+  .tattoo-care h2{
+    margin-bottom: 20px;
+  }
+  .care-tab{
+    padding: 10px 15px;
+  }
+
+
+   /* tatto care */
 
 }
