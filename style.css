@@ -768,7 +768,7 @@ button:hover{
   width: 20%;   
   display: none;
   color: #D3D3D3;
-  z-index: 100;
+  z-index: 5;
 }
 
 .consultation-input:invalid + .place-holder {
@@ -940,11 +940,17 @@ ul{
   display: flex;
 }
 
+.modal-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+}
 .close-img{
-  align-self: flex-start;
+  align-self: flex-end;
   width: 30px;
   height: 30px;
-  margin: 20px;
+  margin: 5px;
 }
 
 .close-img:hover, .close-profile:hover{
@@ -953,7 +959,8 @@ ul{
 
 #modal-img{
   max-width: 600px;
-  min-height: 600px;
+  width: 100%;
+  height: auto;
 }
 
 
@@ -977,15 +984,17 @@ ul{
 
 .profile-desc{
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  flex-wrap:wrap;
+    
   width: 100%;
 }
 
 
 .profile-ava{
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  widows: 100%;
+  height: auto
 }
 
 .profile-text{
@@ -1004,7 +1013,7 @@ ul{
 
 .profile-pic {
   width: 200px;
-  height: 200px;
+  height: auto;
 }
 
 .profile-pic-wrapper{
@@ -1019,7 +1028,9 @@ ul{
 /* Other end */
 
 .footer{
-  padding: 40px 10% 10px 10%;
+  width: 100%;
+  min-height: 150px;
+  padding: 5%;
   background: rgba(15, 15, 15, 0.95);
   color:white;
   display: flex;
@@ -1027,6 +1038,7 @@ ul{
   justify-content: space-between;
   font-size: 12px;
   line-height: 15px;
+  box-sizing: border-box;
 }
 
 
@@ -1034,7 +1046,7 @@ ul{
   text-decoration-line: underline;
 }
 .footer>*{
-  padding: 1rem;
+  padding: 5px  ;
 }
 
 
@@ -1189,6 +1201,9 @@ ul{
 
 
   /* map */
+  .map{
+    height: auto;
+  }
   iframe{
     position: static;
   }
@@ -1211,6 +1226,9 @@ ul{
   }
   
   /* header */
+  .header{
+    height: 450px;
+  }
   .whatch-work-but, .mouse-icn img{
     display: none;
   }
@@ -1258,4 +1276,15 @@ ul{
   }
    /* tatto care */
 
+  /* footer */
+  .footer{
+    flex-direction: column;
+    align-items: center;
+  }
+  /* footer */
+
+   .arrow-top{
+     width: 30px;
+     height: 30px;
+   }
 }
