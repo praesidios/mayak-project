@@ -685,14 +685,16 @@ button:hover{
 
 
 .tattoo-meaning{
-  padding: 5% 0px 7% 0px;
+  margin-bottom: 7%;
   display: none;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .text-meaning-left {
-  width: 530px;
+  max-width: 530px;
+  width: 100%;
+  height: auto;
   padding: 2%;
 }
 
@@ -701,16 +703,14 @@ button:hover{
 }
 
 .quotes-meaning-left{
-  width: 530px;
-  max-height: 235px;
+  text-align: center;
+  padding: 5% 7%;
+  max-width: 530px;
+  min-height: 235px;
+  height: auto;
   border: 1px solid #E5E5E5;
   box-sizing: border-box;
   box-shadow: 0px 4px 20px rgba(229, 229, 229, 0.5);
-}
-
-.quotes-meaning-left{
-  text-align: center;
-  padding: 18px 40px 40px 40px;
 }
 
 .quotes-meaning-left img {
@@ -719,6 +719,11 @@ button:hover{
 
 .meaning-rigth{
   padding: 2%;
+}
+
+.meaning-rigth img{
+  width: 100%;
+  height: auto;
 }
 .wrapTattooCare.active-tab{
   display:flex;
@@ -1251,8 +1256,6 @@ ul{
   .care-tab{
     padding: 10px 15px;
   }
-
-
    /* tatto care */
 
 }
