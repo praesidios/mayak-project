@@ -226,7 +226,7 @@ h1{
 /*  Portfolio start */
 
 .portfolio{
-  padding: 0 10% 100px 10%;
+  padding: 0 10% 7% 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,12 +288,14 @@ button:hover{
 }
 
 .portfolio-pic-wrap::-webkit-scrollbar,
-.profile-pic-wrapper::-webkit-scrollbar{
+.profile-pic-wrapper::-webkit-scrollbar,
+.team-profile::-webkit-scrollbar{
   width: 5px;
 }
 
 .portfolio-pic-wrap::-webkit-scrollbar-thumb,
-.profile-pic-wrapper::-webkit-scrollbar-thumb{
+.profile-pic-wrapper::-webkit-scrollbar-thumb,
+.team-profile::-webkit-scrollbar-thumb{
   background: rgba(15, 15, 15, 0.8);
   border-radius: 2px;
 }
@@ -316,7 +318,7 @@ button:hover{
 .achievements{
   background:rgba(15, 15, 15, 0.95);
   text-align: center;
-  padding: 10% 7%;
+  padding: 7% 10% 3% 10%;
 }
 
 .achievements h2{
@@ -330,7 +332,7 @@ button:hover{
 }
 
 .diploma{
-  margin: 40px 90px 40px 90px;
+  margin: 7% 10%;
 }
 
 .diploma-wrap img{
@@ -358,7 +360,7 @@ button:hover{
 /* Price start */
 
 .price{
-  padding: 90px 0 105px 0;
+  padding: 7% 0;
   text-align: center;
 }
 
@@ -421,7 +423,7 @@ button:hover{
 /* Team start */
 
 .team{
-  padding: 100px 0 55px 0;
+  padding: 7% 0;
   background: rgba(15, 15, 15, 0.95);
   text-align: center;
   color: white;
@@ -941,15 +943,19 @@ ul{
 }
 
 .modal-wrapper{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 600px;
 }
 .close-img{
+  position: absolute;
+  top:0;
+  right: 0;
   align-self: flex-end;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   margin: 5px;
 }
 
@@ -959,25 +965,27 @@ ul{
 
 #modal-img{
   max-width: 600px;
+  max-height: 600px;
   width: 100%;
-  height: auto;
 }
 
 
 
 .team-profile{
+  position: relative;
   flex: 0 1 700px;
-  max-height: 95%;
-  min-height: 60%;
-  background: white;
+  height: 95%;
   padding: 20px;
+  background: white;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow-y: scroll;
 }
 
 .close-profile{
-  align-self: flex-end;
+  position: absolute;
+  top: 10px;;
+  right: 10px;
   width: 20px;
 }
 
@@ -986,43 +994,44 @@ ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-    
+  align-items: flex-start;
   width: 100%;
 }
 
 
 .profile-ava{
   max-width: 200px;
-  widows: 100%;
-  height: auto
+  width: 100%;
+  height: auto;
+  margin: 0 20px;
 }
 
 .profile-text{
   display: flex;
   flex-direction: column;
-  padding-left: 5%;
-  flex-grow: 1;
 }
-.profile-text h3,.profile-text span{
+.profile-text span{
   margin-bottom: 10px;
 }
 
 .profile-text h3{
   font-size: 25px;
+  margin-bottom: 10px;
 }
 
+
 .profile-pic {
-  width: 200px;
-  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 12px;
 }
 
 .profile-pic-wrapper{
   width: 100%;
-  overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 40px;
+  justify-content: center;
+  margin-top: 25px;
 }
 
 /* Other end */
@@ -1215,6 +1224,14 @@ ul{
 
 }
 
+@media screen and (max-width: 505px){
+  .profile-pic-wrapper, .profile-desc, .profile-text{
+    justify-content: center;
+  }
+  .profile-text{
+    width: 200px;
+  }
+}
 
 @media screen and (max-width: 480px){
 
@@ -1287,4 +1304,7 @@ ul{
      width: 30px;
      height: 30px;
    }
+
+   
+
 }
